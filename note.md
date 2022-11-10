@@ -11,6 +11,7 @@
 # CV - 3D Reconstruction
 
 <h3>TransformerFusion: Monocular RGB Scene Reconstruction using Transformers</h3>
+
 - 【NeurlIPS2021】 [ArXiv](https://arxiv.org/abs/2107.02191)  [Code](https://github.com/AljazBozic/TransformerFusion)
 - 简介：Transformer在单RGB Video室内场景三维重建中的应用
 - 关键技术：
@@ -25,6 +26,7 @@
 
 ---
 <h3>Neural Deformation Graphs for Globally-consistent Non-rigid Reconstruction</h3>
+
 - 【CVPR2021】[Paper](https://aljazbozic.github.io/neural_deformation_graphs/) [Code](https://github.com/AljazBozic/NeuralGraph)
 - 简介：使用GNN进行非刚性4D重建
 - 关键技术：
@@ -39,6 +41,7 @@
 
 ---
 <h3>Learning to Optimize Non-Rigid Tracking</h3>
+
 - 【CVPR2020】[ArXiv](https://arxiv.org/abs/2003.12230)
 - 简介：RGBD非刚性循迹图网络的收敛优化
 - 关键技术：
