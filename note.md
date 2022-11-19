@@ -1,13 +1,31 @@
 <h1 align="center">Paper Reading Notebooks </h1>
 
-| Field | Paper | Date |
-|--|-----|--|
-| **CV** - 3D Construction | TransformerFusion |  22-11-08  |
-| **CV** - 3D Construction | Neural Deformation Graphs |  22-11-09  |
-| **CV** - 3D Construction | Optimize Non-Rigid Tracking |  22-11-10  |
-| **Audio** | Whisper |  22-11-17  |
+<table>
+	<tr>
+	    <th>Filed</th>
+	    <th>Paper</th>
+	    <th>Date</th>  
+	</tr >
+	<tr >
+	    <td rowspan="3"><b>CV</b>: 3D Construction</td>
+	    <td>TransformerFusion</td>
+	    <td>22-11-08</td>
+	</tr>
+	<tr>
+	    <td>Neural Deformation Graphs</td>
+	    <td>22-11-09</td>
+	</tr>
+	<tr>
+	    <td>Optimize Non-Rigid Tracking</td>
+	    <td>22-11-10</td>
+	</tr>
+	<tr>
+	    <td rowspan="1"><b>Audio</b></td>
+	    <td>Whisper</td>
+	    <td>22-11-17</td>
+	</tr>
+</table>
 
-<br>
 
 # CV - 3D Reconstruction
 
