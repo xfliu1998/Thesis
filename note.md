@@ -6,6 +6,15 @@
 	    <th>Paper</th>
 	    <th>Date</th>  
 	</tr >
+    <tr >
+	    <td rowspan="2"><b>CV</b>: Image</td>
+	    <td>VTs-Drloc</td>
+	    <td>22-11-24</td>
+	</tr>
+	<tr>
+	    <td> </td>
+	    <td>22-11-25</td>
+	</tr>
 	<tr >
 	    <td rowspan="3"><b>CV</b>: 3D Construction</td>
 	    <td>TransformerFusion</td>
@@ -26,6 +35,35 @@
 	</tr>
 </table>
 
+# CV - Image
+
+<h3>Efficient Training of Visual Transformers with Small-Size Datasets</h3>
+
+- 【NeurlIPS2021】 [ArXiv](https://arxiv.org/abs/2106.03746)  [Code](https://github.com/yhlleo/VTs-Drloc)
+- 简介：使用小数据集优化训练Visual Transformer，训练加速，泛化能力增强。
+- 关键技术：
+  1. 验证实验SOTA VTs(CvT、Swin、T2T)在小数据集上效果不好
+  2. VT由于缺少卷积归纳偏置，设计自监督代理任务，从图片中提取额外的信息学习空间关联，增加dense relative localization loss($L_{drloc}$)，即插即用。
+- Limitation：fine-grained嵌入网格效果不好
+
+<div align="center">
+  <img src="Image/22-11-24VTs-Drloc.png">
+</div>
+<br>
+
+---
+<h3>Vision Transformer for Small-Size Datasets</h3>
+
+- 【2021】 [ArXiv](https://arxiv.org/abs/2112.13492)  [Code](https://github.com/aanna0701/SPT_LSA_ViT)
+- 简介：使用SPT+LSA解决由于Vision Transformer缺少局部归纳偏置不能在小数据集上训练的问题
+- 关键技术：
+  1. Shifted Patch Tokenization：利用邻接像素空间关系，扩大感受野
+  2. Locality Self-Attention Mechanism：使用Diagonal Masking增加不同token之间的注意力分数 + 通过Learnable Temperature Scaling控制输出分布的平滑度
+  
+<div align="center">
+  <img src="Image/22-11-25SPT_LSA_ViT.png">
+</div>
+<br>
 
 # CV - 3D Reconstruction
 
