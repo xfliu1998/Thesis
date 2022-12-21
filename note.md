@@ -12,7 +12,7 @@
 	    <td>22-11-24</td>
 	</tr>
 	<tr>
-	    <td> </td>
+	    <td>SPT_LSA_ViT</td>
 	    <td>22-11-25</td>
 	</tr>
 	<tr >
@@ -27,6 +27,11 @@
 	<tr>
 	    <td>Optimize Non-Rigid Tracking</td>
 	    <td>22-11-10</td>
+	</tr>
+	<tr>
+        <td rowspan="1"><b>NLP</b>: Retrieval</td>
+	    <td>Neural Corpus Indexer</td>
+	    <td>22-12-21</td>
 	</tr>
 	<tr>
 	    <td rowspan="1"><b>Audio</b></td>
@@ -113,7 +118,24 @@
 <br>
 
 ---
+# NLP - Retrieval
 
+<h3>A Neural Corpus Indexer for Document Retrieval</h3>
+- 【NeurlIPS2022】[ArXiv](https://arxiv.org/abs/2206.02743v1)
+- 简介：基于Transformer的sequence-to-sequence架构，给定qurey生成相关文档id
+- 关键技术：
+  1. 和DSI一样，是端到端的文档检索模型
+  2. prefix-aware weight-adaptive (PAWA) 解码器生成文档id
+  3. 基于对比学习的一致性正则损失
+- Limitation：模型过大不利于部署；检索速度有待提高；model-based难以进行新文档更新
+- 参考：[沐神论文精读](https://www.bilibili.com/video/BV1Se411w7Sn/?spm_id_from=333.788&vd_source=486265fa677326a8f53894f05277bfb9)
+
+<div align="center">
+  <img src="Image/22-12-21NCI.png">
+</div>
+<br>
+
+---
 # Audio
 
 <h3>Robust Speech Recognition via Large-ScaleWeak Supervision</h3>
