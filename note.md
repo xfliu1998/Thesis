@@ -16,7 +16,7 @@
 	    <td>22-11-25</td>
 	</tr>
 	<tr >
-	    <td rowspan="3"><b>CV</b>: 3D Construction</td>
+	    <td rowspan="4"><b>CV</b>: 3D Construction</td>
 	    <td>TransformerFusion</td>
 	    <td>22-11-08</td>
 	</tr>
@@ -27,6 +27,15 @@
 	<tr>
 	    <td>Optimize Non-Rigid Tracking</td>
 	    <td>22-11-10</td>
+	</tr>
+	<tr>
+	    <td>Neural-DynamicReconstruction (NDR)</td>
+	    <td>23-02-14</td>
+	</tr>
+    <tr>
+        <td rowspan="1"><b>NLP</b></td>
+	    <td>HELM</td>
+	    <td>23-02-06</td>
 	</tr>
 	<tr>
         <td rowspan="1"><b>NLP</b>: Retrieval</td>
@@ -116,6 +125,42 @@
   <img src="Image/22-11-10Optim_NRT.png">
 </div>
 <br>
+
+---
+<h3>Neural Surface Reconstruction of Dynamic Scenes with Monocular RGB-D Camera</h3>
+
+- 【NeurlIPS2021】[ArXiv](https://arxiv.org/abs/2206.15258)
+- 简介：用单RGBD图像对动态场景进行神经表面重建
+- 关键技术：
+  1. NDR通过无模板先验的隐式形变场恢复运动信息并将观测帧的采样点变换到基准空间，
+再通过基准空间中的符号距离场和神经辐射场分别恢复几何与颜色信息。
+  2. 为了保证运动信息的周期一致性，在形变场中设计了一个符合非刚性运动的双射模块；
+引入拓扑感知网络解决动态场景中常见的拓扑变化问题
+- Limitation：输入是大而快的动作时重建效果不好，很难获得合理的相机位姿作为初始化；建模效率不高
+
+
+<div align="center">
+  <img src="Image/23-02-14NDR.png">
+</div>
+<br>
+
+---
+# NLP
+
+<h3>Holistic Evaluation of Language Models</h3>
+- [ArXiv](https://arxiv.org/abs/2211.09110)
+- 简介：全面的语言模型评测，针对现有语言模型的评测内容包括：核心场景、通用评价标准、针对性评估、模型、适用性等（要有钱有人力有人脉）
+- 关键技术：
+  1. 先对语言模型分类，补充标准语言模型对各类模型的评价（准确率、校准、鲁棒性、公平性、偏见、有毒性、效率）
+  2. 实验发现：InstructGPT davinci v2(175B*)综合表现最好；未开源的模型效果比开源模型效果好得多；所有模型对Prompting有很大的敏感性；模型越大效果越好
+- Limitation：场景、评价标准、适用性不全等
+- 参考：[沐神论文精读](https://www.bilibili.com/video/BV1z24y1B7uX/?spm_id_from=444.41.list.card_archive.click&vd_source=486265fa677326a8f53894f05277bfb9)
+
+<div align="center">
+  <img src="Image/23-02-06HELM.png">
+</div>
+<br>
+
 
 ---
 # NLP - Retrieval
