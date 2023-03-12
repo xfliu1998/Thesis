@@ -16,7 +16,7 @@
 	    <td>22-11-25</td>
 	</tr>
 	<tr >
-	    <td rowspan="4"><b>CV</b>: 3D Construction</td>
+	    <td rowspan="6"><b>CV</b>: 3D Construction</td>
 	    <td>TransformerFusion</td>
 	    <td>22-11-08</td>
 	</tr>
@@ -32,10 +32,22 @@
 	    <td>Neural-DynamicReconstruction (NDR)</td>
 	    <td>23-02-14</td>
 	</tr>
+	<tr>
+	    <td>Mono-STAR</td>
+	    <td>23-02-17</td>
+	</tr>
+	<tr>
+	    <td>FlowNet3D</td>
+	    <td>23-03-09</td>
+	</tr>
     <tr>
-        <td rowspan="1"><b>NLP</b></td>
+        <td rowspan="2"><b>NLP</b></td>
 	    <td>HELM</td>
 	    <td>23-02-06</td>
+	</tr>
+    <tr>
+	    <td>InstructGPT, Anthropic_LLM</td>
+	    <td>23-03-12</td>
 	</tr>
 	<tr>
         <td rowspan="1"><b>NLP</b>: Retrieval</td>
@@ -138,9 +150,38 @@
 引入拓扑感知网络解决动态场景中常见的拓扑变化问题
 - Limitation：输入是大而快的动作时重建效果不好，很难获得合理的相机位姿作为初始化；建模效率不高
 
-
 <div align="center">
   <img src="Image/23-02-14NDR.png">
+</div>
+<br>
+
+---
+<h3>Mono-STAR: Mono-camera Scene-level Tracking and Reconstruction</h3>
+
+- 【ICRA2023】[ArXiv](https://arxiv.org/abs/2301.13244) [Code](https://github.com/changhaonan/Mono-STAR-demo)
+- 简介：RGBD图像同步重建和循迹，支持语义融合、快速动作循迹、非刚性目标变形和拓扑改变
+- 关键技术：
+  1. 基于光流法进行2D约束解决快速循迹问题
+  2. 使用语义感知的变形图SAD-graph处理拓扑改变：变形图的不同边使用变化的自适应权重（自适应正则化损失）
+- Limitation：依赖光流法循迹；重建表面不完整且表面难以保持光滑
+
+<div align="center">
+  <img src="Image/23-02-17Mono-STAR.png">
+</div>
+<br>
+
+---
+<h3>FlowNet3D: Learning Scene Flow in 3D Point Clouds</h3>
+
+- 【CVPR2019】[ArXiv](https://arxiv.org/abs/1806.01411) [Code](https://github.com/xingyul/flownet3d)
+- 简介：通过深度混合架构直接对点云进行端到端的场景流估计
+- 关键技术：
+  1. 提出一种端到端的估计连续点云对的场景流方法，做了充分的对比实验、消融、可视化、应用分析验证方法的优越性。
+  2. 模型中的flow embedding层学习两片点云的相关特征，set upconv层学习点云到点云的传播特征。（这俩层结构差不多但输入不同学习的特征不同）
+- 思考：模型是UNet架构和PointNet++的abstraction layer的合体，并没有特别的创新。论文好在模型应用迁移、实验充分和会讲故事，尤其是场景流的meta-architecture总结的很好。
+
+<div align="center">
+  <img src="Image/23-03-09FlowNet3D.png">
 </div>
 <br>
 
@@ -158,6 +199,27 @@
 
 <div align="center">
   <img src="Image/23-02-06HELM.png">
+</div>
+<br>
+
+---
+<h3>Training language models to follow instructions with human feedback</h3>
+- [ArXiv](https://arxiv.org/abs/2203.02155)
+- 参考：[沐神论文精读](https://www.bilibili.com/video/BV1hd4y187CR/?spm_id_from=333.999.0.0&vd_source=486265fa677326a8f53894f05277bfb9)
+
+<div align="center">
+  <img src="Image/23-03-12InstructGPT.png">
+  <img src="Image/23-03-12InstructGPT_c.png">
+</div>
+<br>
+
+<h3>Training a Helpful and Harmless Assistant with Reinforcement Learning from Human Feedback</h3>
+- [ArXiv](https://arxiv.org/abs/2204.05862)
+- 参考：[沐神论文精读](https://www.bilibili.com/video/BV1XY411B7nM/?spm_id_from=333.788&vd_source=486265fa677326a8f53894f05277bfb9)
+
+<div align="center">
+  <img src="Image/23-03-12Anthropic_LLM.png">
+  <img src="Image/23-03-12Anthropic_LLM_c.png">
 </div>
 <br>
 
