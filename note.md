@@ -41,7 +41,7 @@
 	    <td>23-03-09</td>
 	</tr>
     <tr>
-        <td rowspan="2"><b>NLP</b></td>
+        <td rowspan="3"><b>NLP</b></td>
 	    <td>HELM</td>
 	    <td>23-02-06</td>
 	</tr>
@@ -49,13 +49,17 @@
 	    <td>InstructGPT, Anthropic_LLM</td>
 	    <td>23-03-12</td>
 	</tr>
+    <tr>
+	    <td>Visual ChatGPT</td>
+	    <td>23-03-17</td>
+	</tr>
 	<tr>
         <td rowspan="1"><b>NLP</b>: Retrieval</td>
 	    <td>Neural Corpus Indexer</td>
 	    <td>22-12-21</td>
 	</tr>
 	<tr>
-	    <td rowspan="1"><b>Audio</b></td>
+	    <td rowspan="1"><b>NLP</b>: Audio</td>
 	    <td>Whisper</td>
 	    <td>22-11-17</td>
 	</tr>
@@ -223,6 +227,20 @@
 </div>
 <br>
 
+---
+<h3>Visual ChatGPT: Talking, Drawing and Editing with Visual Foundation Models</h3>
+- Microsoft [ArXiv](https://arxiv.org/abs/2303.04671)
+- 简介：联合不同的视觉基础模型（VFM）使得ChatGPT可以处理复杂的视觉任务
+- 关键技术：
+  1. 包含22个不同VFMs的Prompt Manager使得ChatGPT更好的交互和结合处理图像任务
+  2. 复杂的Zero-shot实验验证了模型的优越性
+- Limitation：依赖ChatGPT和VFMs的结合；需要大量大的Prompt工程；实时性不好；限制于ChatGPT的token的长度；安全和隐私
+
+<div align="center">
+  <img src="Image/23-03-17Visual_ChatGPT.png">
+</div>
+<br>
+
 
 ---
 # NLP - Retrieval
@@ -243,7 +261,7 @@
 <br>
 
 ---
-# Audio
+# NLP - Audio
 
 <h3>Robust Speech Recognition via Large-ScaleWeak Supervision</h3>
 
