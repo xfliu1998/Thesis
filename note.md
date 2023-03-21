@@ -16,7 +16,7 @@
 	    <td>22-11-25</td>
 	</tr>
 	<tr >
-	    <td rowspan="6"><b>CV</b>: 3D Construction</td>
+	    <td rowspan="7"><b>CV</b>: 3D Construction</td>
 	    <td>TransformerFusion</td>
 	    <td>22-11-08</td>
 	</tr>
@@ -39,6 +39,10 @@
 	<tr>
 	    <td>FlowNet3D</td>
 	    <td>23-03-09</td>
+	</tr>
+	<tr>
+	    <td>Bi-PointFlowNet</td>
+	    <td>23-03-21</td>
 	</tr>
     <tr>
         <td rowspan="3"><b>NLP</b></td>
@@ -186,6 +190,16 @@
 
 <div align="center">
   <img src="Image/23-03-09FlowNet3D.png">
+</div>
+<br>
+
+---
+<h3>Bi-PointFlowNet: Bidirectional Learning for Point Cloud Based Scene Flow Estimation</h3>
+
+- 【ECCV2022】[ArXiv](https://arxiv.org/abs/2207.07522) [Code](https://github.com/cwc1260/BiFlow)
+
+<div align="center">
+  <img src="Image/23-03-21Bi-PointFlowNet.png">
 </div>
 <br>
 
