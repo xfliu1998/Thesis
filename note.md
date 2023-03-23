@@ -45,7 +45,12 @@
 	    <td>23-03-21</td>
 	</tr>
     <tr>
-        <td rowspan="3"><b>NLP</b></td>
+        <td rowspan="1"><b>NLP</b></td>
+	    <td>Adaptive input & DLCL</td>
+	    <td>23-03-23</td>
+	</tr>
+    <tr>
+        <td rowspan="3"><b>NLP</b>: Language Model</td>
 	    <td>HELM</td>
 	    <td>23-02-06</td>
 	</tr>
@@ -204,7 +209,42 @@
 <br>
 
 ---
+
 # NLP
+
+<h3>Learning Deep Transformer Models for Machine Translation</h3>
+- 【ACL2019】 [ArXiv](https://arxiv.org/abs/1906.01787) [Code](https://github.com/wangqiangneu/dlcl)
+- 简介：原始的Transformer的encoder层>12时很难训练。针对机器翻译任务，本文加入两个技巧（pre-LN和动态线性结合残差连接）训练更深层的Transformer，使模型参数更少训练更快
+- 关键技术：
+  1. 相较于原始Transformer的Post-norm，使用Pre-norm可以减少梯度反传计算量，训练更高效
+  2. 使用动态线性结合层（DLCL）代替传统的残差连接，用可学习的权值计算历史记忆的连接
+     - 更早的层连接更稠密，层深越深连接变得稀疏
+     - 距离输出层最近的连接权值越高
+     - 不同层的权值动态变化
+- 思考：不一定专注模型创新，把小的tricks灵活修改做足实验也是好work
+
+<div align="center">
+  <img src="Image/23-03-23DLCL.png">
+</div>
+<br>
+
+---
+
+<h3>Adaptive Input Representations for Neural Language Modeling</h3>
+- FAIR【ICLR2019】 [ArXiv](https://arxiv.org/abs/1809.10853) [Code](http://github.com/pytorch/fairseq)
+- 相关Paper:《Efficient softmax approximation for GPUs》FAIR【ICML2017】[Arxiv](https://arxiv.org/abs/1609.04309v3) [Code](https://github.com/facebookresearch/adaptive-softmax)
+- 简介：在自适应softmax基础上，提出了神经网络语言模型的自适应输入表示，使得网络参数更少且训练更快
+- 关键技术：如果输出层使用与自适应输入表示相同参数(V, k, d)的自适应softmax，可以通过参数共享进一步减少参数，还可以共享减少容量的线性变化参数
+- 参考：[Adaptive Softmax](https://zhuanlan.zhihu.com/p/109125864); [Adaptive Input](https://zhuanlan.zhihu.com/p/67666803)
+
+<div align="center">
+  <img src="Image/23-03-23Adaptive_input.png">
+</div>
+<br>
+
+---
+
+# NLP - Language Model
 
 <h3>Holistic Evaluation of Language Models</h3>
 - [ArXiv](https://arxiv.org/abs/2211.09110)
